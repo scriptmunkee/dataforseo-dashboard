@@ -1,0 +1,24 @@
+{
+  "name": "dataforseo-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local dashboard for DataForSEO: domain overview, keyword research, competitors, backlinks, SERP and AI visibility, with a response cache and cost meter.",
+  "scripts": {
+    "dev": "concurrently -k -n api,ui -c blue,green \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "npm run build && node server/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.7"
+  }
+}
